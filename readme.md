@@ -1,4 +1,4 @@
-##How to get Click to Dial working in Salesforce with Twilio##
+#  How to get Click to Dial working in Salesforce with Twilio
 
 This is a step by step guide to get click2 dial and basic inbound routing working in Salesforce OpenCTI by using Twilio.
 
@@ -51,7 +51,7 @@ After setup, you need to do the following steps
 ![BuyphoneNumber](http://uploadir.com/u/5mu93v1n)
 
 
-###In Salesforce###
+### In Salesforce
 
 1. Go to Develop > Custom Settings > TwilioConfig.  Press the "Manage"" link then > "New"" to set new variables
 ![config](http://uploadir.com/u/n6p22ssu)
@@ -61,7 +61,7 @@ Add the (AccountSid, AuthToken, ApplicationSid, CallerId) parameters created fro
 ![newconfig](http://uploadir.com/u/q7eppa04)
 
 
-##Setting up a VisualForce Site##
+## Setting up a VisualForce Site
 
 2. Go to SalesForce Setup -> Develop -> Sites 
 Create a new Site or use make sure **Dial**  Visual Force page that is included:  **TwilioClick2Dial**, **Dial** VisualForce Pages. You need to click on the label for the site to find the settings:
@@ -90,7 +90,7 @@ For example, if you created a new site in a Developer org , the url to Dial migh
 
 
 
-###Setting up Salesforce Call Center###
+## Setting up Salesforce Call Center
 
 Addendum to steps 1-3: The Call Center > CTI Adapter URL can simply be set to "/apex/TwilioClick2Dial", DemoAdapterTwilio.xml has been updated accordingly.
 
@@ -119,7 +119,7 @@ You will know everything is setup correctly if you can:
 
 Test this by navigating to any regular Contact record (or other places where the Call Center is deployed). You should see a very bare looking CTI Panel.  You can also add a phoen number to dial, or create a new contact and click on the phone number to determine if the call is being dialed.
 
-##Inbound routing ##
+## Inbound routing
 
 To route Incoming Calls to one or more of your Twilio Phone Numbers into your Salesforce Call Center Softphone, go to your Twilio Phone Number, and set the "Voice Request Url"  to be `<YourSiteBaseUrl>/respond`, e.g. http://twilioctidemo-developer-edition.na15.force.com/respond
 
